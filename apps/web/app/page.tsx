@@ -1,19 +1,51 @@
-import { Button } from "@workspace/ui/components/button"
+import { Navbar } from "@/components/navbar"
+import { Hero } from "@/components/sections/hero"
+import { TrustBar } from "@/components/sections/trust-bar"
+import { Infrastructure } from "@/components/sections/infrastructure"
+import { DashboardShowcase } from "@/components/sections/dashboard-showcase"
+import { PaymentMethods } from "@/components/sections/payment-methods"
+import { GlobalPayments } from "@/components/sections/global-payments"
+import { Solutions } from "@/components/sections/solutions"
+import { ControlNumbers } from "@/components/sections/control-numbers"
+import { PaymentLinks } from "@/components/sections/payment-links"
+import { Invoicing } from "@/components/sections/invoicing"
+import { Wallet } from "@/components/sections/wallet"
+import { Developers } from "@/components/sections/developers"
+import { Webhooks } from "@/components/sections/webhooks"
+import { ReceiptsNotifications } from "@/components/sections/receipts-notifications"
+import { Security } from "@/components/sections/security"
+import { Analytics } from "@/components/sections/analytics"
+import { ComingSoon } from "@/components/sections/coming-soon"
+import { Comparison } from "@/components/sections/comparison"
+import { FinalCTA } from "@/components/sections/final-cta"
+import { Footer } from "@/components/sections/footer"
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustBar />
+        <Infrastructure />
+        <DashboardShowcase />
+        <PaymentMethods />
+        <GlobalPayments />
+        <Solutions />
+        <ControlNumbers />
+        <PaymentLinks />
+        <Invoicing />
+        <Wallet />
+        <Developers />
+        <Webhooks />
+        <ReceiptsNotifications />
+        <Security />
+        <Analytics />
+        <ComingSoon />
+        <Comparison />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
   )
 }
