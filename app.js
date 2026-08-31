@@ -1,3 +1,6 @@
 // Plesk / Phusion Passenger startup file for Next.js standalone
-// This file boots the self-contained Next.js server produced by `output: "standalone"`
-require("./server.js");
+// Passenger loads this file as CommonJS, so we use dynamic import() for the ESM server
+async function main() {
+  await import("./apps/web/server.js");
+}
+main();
